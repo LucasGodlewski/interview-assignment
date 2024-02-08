@@ -42,7 +42,7 @@ By default `DEBUG` mode is enabled causing logging SQL queries as well as cache 
 Therefore, in order to see the cache stats, either provide bigger file or decrease the size of a chunks in `app.py`.
 
 
-### Final words to provided solution:
+### Final words:
 
 I used iterator and chunks during reading the csv file with pandas library, to prevent loading whole file in the memory, which could lead to OOM. 
 
