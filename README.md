@@ -48,6 +48,8 @@ I used iterator and chunks during reading the csv file with pandas library, to p
 
 While getting chunk from iterator, I used vectorized function and chained the operation on DataFrame to gain speed advantage and saved some memory. 
 
+To increase speed of data reads from database, I put it in memory.
+
 To limit roundtrips to database, I implemented custom `lru_cache` wrappper that allows to set a TTL.
 
 I thought about using Spark for this project however, since it's a coding assignment and Spark would handle most of the stuff for me I decided to do everything on my own. 

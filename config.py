@@ -4,7 +4,7 @@ import pandas as pd
 DEBUG = True
 
 # Cache Time To Live in seconds
-CACHE_TTL = 60 * 5  # -> 5 minutes
+CACHE_TTL = 5
 
 # Definition of the columns from the input file
 HEADER_NAMES = ['instrument', 'date', 'value']
