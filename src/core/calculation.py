@@ -21,6 +21,16 @@ class Engine:
         """
         return self._mean[name]
 
+    def get_mean_from_recent(self, name: str) -> Decimal:
+        """
+        Gets mean of 10 most recent records for given instrument name
+        :param name: instrument name
+        :return: Mean value for instrument
+        """
+        values = self._recent_values[name].values()
+        mean = sum(values) / len(values)
+        return Decimal(str(mean))
+
     def show_mean_for_all(self) -> None:
         """Shows current state for all instruments"""
         for name, mean in self._mean.items():
